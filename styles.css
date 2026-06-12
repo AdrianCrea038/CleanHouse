@@ -90,7 +90,7 @@ h1 span,h2 span{color:var(--purple-500)}
 .photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,0) 48%),radial-gradient(circle at 88% 86%,rgba(255,255,255,.85),transparent 24%)}
 .hero-photo{min-height:500px}
 .badge{position:absolute;right:26px;bottom:34px;width:132px;height:132px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:#fff;color:var(--purple-800);font-family:Georgia,serif;font-size:22px;line-height:1.05;box-shadow:0 18px 36px rgba(61,11,103,.18);border:8px solid #f2e9ff;z-index:2}
-.butterfly,.float-butterfly{font-family:serif;color:var(--purple-500);filter:drop-shadow(0 8px 10px rgba(109,29,180,.18));opacity:.9}
+.butterfly,.float-butterfly{color:var(--purple-500);filter:drop-shadow(0 8px 10px rgba(109,29,180,.18));opacity:.9}
 .b1{position:absolute;top:44px;left:58px;font-size:38px;transform:rotate(-18deg);z-index:2}.sparkle{position:absolute;color:var(--purple-300);z-index:3}.s1{top:100px;left:0;font-size:38px}.s2{right:18px;bottom:120px;font-size:46px}
 
 .section-heading{text-align:center;margin-bottom:36px}
@@ -406,3 +406,9 @@ h1 span,h2 span{color:var(--purple-500)}
   width:48px;
   height:48px;
 }
+
+/* Mariposa decorativa SVG: reemplaza el carácter chino anterior */
+.butterfly-icon{width:1em;height:1em;display:block;}
+.butterfly.b1,.float-butterfly{display:grid;place-items:center;}
+.float-butterfly .butterfly-icon{width:54px;height:54px;}
+.butterfly.b1 .butterfly-icon{width:46px;height:46px;}

@@ -63,7 +63,7 @@ function handleSubmit(event, noteElement) {
   }
 
   const encoded = encodeURIComponent(buildMessage(form));
-  const whatsappUrl = `https://wa.me/525512345678?text=${encoded}`;
+  const whatsappUrl = `https://wa.me/18322773850?text=${encoded}`;
   noteElement.innerHTML = `¡Solicitud lista! <a href="${whatsappUrl}" target="_blank" rel="noopener">Enviar por WhatsApp</a> para confirmar la cotización.`;
   form.reset();
 }
