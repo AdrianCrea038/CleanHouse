@@ -48,8 +48,10 @@ function buildMessage(form) {
   const phone = data.get('phone') || '';
   const service = data.get('service') || 'Servicio no especificado';
   const date = data.get('date') || 'Fecha por confirmar';
+  const rooms = data.get('rooms') || 'No especificado';
+  const bathrooms = data.get('bathrooms') || 'No especificado';
   const message = data.get('message') || '';
-  return `Hola CleanHouse, soy ${name}. Quiero reservar: ${service}. Teléfono: ${phone}. Fecha ideal: ${date}. Detalles: ${message}`;
+  return `Hola CleanHouse, soy ${name}. Quiero una cotización para: ${service}. Teléfono: ${phone}. Fecha ideal: ${date}. Habitaciones: ${rooms}. Baños: ${bathrooms}. Detalles: ${message}`;
 }
 
 function handleSubmit(event, noteElement) {
@@ -62,7 +64,7 @@ function handleSubmit(event, noteElement) {
 
   const encoded = encodeURIComponent(buildMessage(form));
   const whatsappUrl = `https://wa.me/525512345678?text=${encoded}`;
-  noteElement.innerHTML = `¡Solicitud lista! <a href="${whatsappUrl}" target="_blank" rel="noopener">Enviar por WhatsApp</a> para confirmar la reserva.`;
+  noteElement.innerHTML = `¡Solicitud lista! <a href="${whatsappUrl}" target="_blank" rel="noopener">Enviar por WhatsApp</a> para confirmar la cotización.`;
   form.reset();
 }
 
@@ -72,8 +74,10 @@ modalForm?.addEventListener('submit', (event) => handleSubmit(event, modalNote))
 document.querySelectorAll('[data-service]').forEach((link) => {
   link.addEventListener('click', () => {
     const service = link.getAttribute('data-service');
-    const select = document.querySelector('#contactForm select[name="service"]');
-    if (select && service) select.value = service;
+    const mainSelect = document.querySelector('#contactForm select[name="service"]');
+    const modalSelect = document.querySelector('#modalForm select[name="service"]');
+    if (mainSelect && service) mainSelect.value = service;
+    if (modalSelect && service) modalSelect.value = service;
   });
 });
 
@@ -99,4 +103,5 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
+
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));

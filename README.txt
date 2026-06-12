@@ -1,13 +1,13 @@
 CleanHouse Landing Page
 
-Archivos incluidos:
-- index.html: landing page funcional.
-- styles.css: estilos responsive.
-- script.js: menú móvil, modal, validación del formulario, animaciones y WhatsApp.
-- assets/logo-cleanhouse.png: logo de CleanHouse.
+Cambios incluidos:
+- Servicios actualizados: Regular, Profunda, Mudanza, Opcionales y Cotización personalizada.
+- Tarjeta resumen: Limpieza Residencial Profesional.
+- Fotografías agregadas en hero, servicios y testimonios siguiendo el mockup visual.
+- Botón flotante verde actualizado con logo de WhatsApp.
+- Formulario actualizado con habitaciones, baños y servicio para enviar cotización por WhatsApp.
 
-Cómo usar:
-1. Abre index.html en tu navegador para ver la página.
-2. Para publicarla, sube la carpeta completa a tu hosting.
-3. Cambia teléfono, email, ciudad y enlace de WhatsApp en index.html y script.js.
-4. El formulario funciona en frontend y genera un mensaje de WhatsApp. Para guardar reservas en una base de datos se requiere backend, Formspree, Zapier, Make, Google Forms o un CRM.
+Para personalizar:
+1. Cambia el número 525512345678 en index.html y script.js por tu número real con código de país.
+2. Cambia teléfono, email y ciudad en la sección de contacto.
+3. Sube todos los archivos a tu hosting manteniendo la misma estructura.
