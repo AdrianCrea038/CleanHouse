@@ -11,3 +11,6 @@ Para personalizar:
 1. Cambia el número 525512345678 en index.html y script.js por tu número real con código de país.
 2. Cambia teléfono, email y ciudad en la sección de contacto.
 3. Sube todos los archivos a tu hosting manteniendo la misma estructura.
+
+- Botones de reserva actualizados con icono de calendario.
+- Banner CTA actualizado: se reemplazó el símbolo anterior por un icono de calendario.
